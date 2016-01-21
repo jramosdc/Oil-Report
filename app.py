@@ -35,7 +35,7 @@ def my_form_post():
 
     final=''.join("<p>%s<p> %s<p> %s<p> %s<p>" % (linea1, linea2, linea3, linea4)).replace('[',' ').replace(']',' ')
     
-    strfinal=str(final)
+    strfinal=str(final).decode('unicode_escape').encode('ascii','ignore')
     
     front_page = render_template('myform.html', scroll='result')
     
