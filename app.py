@@ -29,7 +29,7 @@ def my_form_post():
     
     linea2=lineas[4:6]
 
-    linea3=lineas[10:11]
+    linea3=lineas[10:11]+lineas[12:13]
 
     linea4=lineas[1:2]
 
