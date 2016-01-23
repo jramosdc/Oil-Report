@@ -35,7 +35,7 @@ def my_form_post():
 
     final=''.join("<p>%s<p> %s<p> %s<p> %s<p>" % (linea1, linea2, linea3, linea4)).replace('[',' ').replace(']',' ')
     
-    final2= ", ".join( repr(e) for e in final ) 
+    final2= "".join( repr(e) for e in final ) 
     
     strfinal=str(final2).decode('unicode_escape').encode('ascii','ignore')
     
