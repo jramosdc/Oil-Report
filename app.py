@@ -25,7 +25,7 @@ def my_form_post():
     
     week= words[7:11]
 
-    linea1=lineas[8:10]+', according to government data for the'+week
+    linea1=lineas[8:10]+[', according to government data for the']+week
     
     linea2=lineas[4:6]
 
