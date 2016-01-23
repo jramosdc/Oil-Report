@@ -25,7 +25,7 @@ def my_form_post():
     
     week= words[7:11]
 
-    linea1=lineas[8:10]+[', according to government data for the']+week
+    linea1=lineas[8:10]+', according to government data for the'+week
     
     linea2=lineas[4:6]
 
@@ -35,9 +35,7 @@ def my_form_post():
 
     final=''.join("<p>%s<p> %s<p> %s<p> %s<p>" % (linea1, linea2, linea3, linea4)).replace('[',' ').replace(']',' ')
     
-    final2= "".join( repr(e) for e in final ) 
-    
-    strfinal=str(final2).decode('unicode_escape').encode('ascii','ignore')
+    strfinal=str(final).decode('unicode_escape').encode('ascii','ignore')
     
     front_page = render_template('myform.html', scroll='result')
     
