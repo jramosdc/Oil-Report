@@ -22,7 +22,7 @@ def my_form_post():
     lineas=tokenizer.tokenize(text)
     
     words = nltk.word_tokenize(text)
-    
+  
     week= words[7:11]
 
     linea1=lineas[8:10]+[', according to government data for the']+week
@@ -33,7 +33,7 @@ def my_form_post():
 
     linea4=lineas[1:2]
 
-    final=''.join("<p>%s<p> %s<p> %s<p> %s<p>" % (linea1, linea2, linea3, linea4)).replace('[',' ').replace(']',' ')
+    final=u' '.join("<p>%s<p> %s<p> %s<p> %s<p>" % (linea1, linea2, linea3, linea4)).replace('[',' ').replace(']',' ')
     
     strfinal=str(final).decode('unicode_escape').encode('ascii','ignore')
     
